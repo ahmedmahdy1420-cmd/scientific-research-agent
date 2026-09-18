@@ -1,0 +1,334 @@
+[
+  {
+    "code": "CMP-0001",
+    "name": "Rentinib",
+    "iupac_name": null,
+    "smiles": null,
+    "molecular_weight": 978.68,
+    "mechanism_of_action": "Peptide agonist of CDK4/6; blocks downstream signalling implicated in melanoma.",
+    "therapeutic_area": "oncology",
+    "development_phase": "Phase 2",
+    "targets": [
+      "BRCA1",
+      "CDK4/6"
+    ]
+  },
+  {
+    "code": "CMP-0002",
+    "name": "Renciclib",
+    "iupac_name": null,
+    "smiles": null,
+    "molecular_weight": 859.23,
+    "mechanism_of_action": "Degrader (protac) of TNF-alpha; blocks downstream signalling implicated in rheumatoid arthritis.",
+    "therapeutic_area": "immunology",
+    "development_phase": "discovery",
+    "targets": [
+      "TNF-alpha"
+    ]
+  },
+  {
+    "code": "CMP-0003",
+    "name": "Talparib",
+    "iupac_name": null,
+    "smiles": null,
+    "molecular_weight": 882.44,
+    "mechanism_of_action": "Selective small-molecule inhibitor of amyloid-beta; blocks downstream signalling implicated in Parkinson disease.",
+    "therapeutic_area": "neurology",
+    "development_phase": "Phase 1",
+    "targets": [
+      "LRRK2",
+      "amyloid-beta"
+    ]
+  },
+  {
+    "code": "CMP-0004",
+    "name": "Ostgliptin",
+    "iupac_name": null,
+    "smiles": null,
+    "molecular_weight": 669.22,
+    "mechanism_of_action": "Covalent inhibitor of SGLT2; blocks downstream signalling implicated in obesity.",
+    "therapeutic_area": "metabolic disease",
+    "development_phase": "discovery",
+    "targets": [
+      "FXR",
+      "SGLT2"
+    ]
+  },
+  {
+    "code": "CMP-0005",
+    "name": "Prastat",
+    "iupac_name": null,
+    "smiles": null,
+    "molecular_weight": 420.8,
+    "mechanism_of_action": "Selective small-molecule inhibitor of InhA; blocks downstream signalling implicated in influenza A.",
+    "therapeutic_area": "infectious disease",
+    "development_phase": "discovery",
+    "targets": [
+      "InhA",
+      "neuraminidase"
+    ]
+  },
+  {
+    "code": "CMP-0006",
+    "name": "Mirzumab",
+    "iupac_name": null,
+    "smiles": null,
+    "molecular_weight": 463.05,
+    "mechanism_of_action": "Allosteric modulator of PCSK9; blocks downstream signalling implicated in hypertension.",
+    "therapeutic_area": "cardiology",
+    "development_phase": "discovery",
+    "targets": [
+      "PCSK9",
+      "SGLT2"
+    ]
+  },
+  {
+    "code": "CMP-0007",
+    "name": "Vorstat",
+    "iupac_name": null,
+    "smiles": null,
+    "molecular_weight": 809.04,
+    "mechanism_of_action": "Antibody-drug conjugate of PARP1; blocks downstream signalling implicated in colorectal cancer.",
+    "therapeutic_area": "oncology",
+    "development_phase": "preclinical",
+    "targets": [
+      "HER2",
+      "PARP1"
+    ]
+  },
+  {
+    "code": "CMP-0008",
+    "name": "Pratinib",
+    "iupac_name": null,
+    "smiles": null,
+    "molecular_weight": 301.47,
+    "mechanism_of_action": "Peptide agonist of IL-17A; blocks downstream signalling implicated in rheumatoid arthritis.",
+    "therapeutic_area": "immunology",
+    "development_phase": "discovery",
+    "targets": [
+      "IL-17A",
+      "TNF-alpha"
+    ]
+  },
+  {
+    "code": "CMP-0009",
+    "name": "Talmab",
+    "iupac_name": null,
+    "smiles": null,
+    "molecular_weight": 774.35,
+    "mechanism_of_action": "Allosteric modulator of LRRK2; blocks downstream signalling implicated in Parkinson disease.",
+    "therapeutic_area": "neurology",
+    "development_phase": "Phase 3",
+    "targets": [
+      "LRRK2",
+      "amyloid-beta"
+    ]
+  },
+  {
+    "code": "CMP-0010",
+    "name": "Ostzumab",
+    "iupac_name": null,
+    "smiles": null,
+    "molecular_weight": 826.89,
+    "mechanism_of_action": "Allosteric modulator of SGLT2; blocks downstream signalling implicated in type 2 diabetes.",
+    "therapeutic_area": "metabolic disease",
+    "development_phase": "Phase 1",
+    "targets": [
+      "SGLT2",
+      "THR-beta"
+    ]
+  },
+  {
+    "code": "CMP-0011",
+    "name": "Nelciclib",
+    "iupac_name": null,
+    "smiles": null,
+    "molecular_weight": 786.82,
+    "mechanism_of_action": "Selective small-molecule inhibitor of neuraminidase; blocks downstream signalling implicated in hepatitis B.",
+    "therapeutic_area": "infectious disease",
+    "development_phase": "Phase 2",
+    "targets": [
+      "RNA polymerase",
+      "neuraminidase"
+    ]
+  },
+  {
+    "code": "CMP-0012",
+    "name": "Zeltinib",
+    "iupac_name": null,
+    "smiles": null,
+    "molecular_weight": 540.47,
+    "mechanism_of_action": "Selective small-molecule inhibitor of factor XIa; blocks downstream signalling implicated in hypertension.",
+    "therapeutic_area": "cardiology",
+    "development_phase": "discovery",
+    "targets": [
+      "ANP receptor",
+      "factor XIa"
+    ]
+  },
+  {
+    "code": "CMP-0013",
+    "name": "Nelparib",
+    "iupac_name": null,
+    "smiles": null,
+    "molecular_weight": 912.85,
+    "mechanism_of_action": "Allosteric modulator of PARP1; blocks downstream signalling implicated in melanoma.",
+    "therapeutic_area": "oncology",
+    "development_phase": "discovery",
+    "targets": [
+      "PARP1"
+    ]
+  },
+  {
+    "code": "CMP-0014",
+    "name": "Mirstat",
+    "iupac_name": null,
+    "smiles": null,
+    "molecular_weight": 420.65,
+    "mechanism_of_action": "Covalent inhibitor of TNF-alpha; blocks downstream signalling implicated in psoriasis.",
+    "therapeutic_area": "immunology",
+    "development_phase": "discovery",
+    "targets": [
+      "IL-17A",
+      "TNF-alpha"
+    ]
+  },
+  {
+    "code": "CMP-0015",
+    "name": "Cadciclib",
+    "iupac_name": null,
+    "smiles": null,
+    "molecular_weight": 874.73,
+    "mechanism_of_action": "Antibody-drug conjugate of LRRK2; blocks downstream signalling implicated in Alzheimer disease.",
+    "therapeutic_area": "neurology",
+    "development_phase": "Phase 2",
+    "targets": [
+      "LRRK2",
+      "tau"
+    ]
+  },
+  {
+    "code": "CMP-0016",
+    "name": "Talmab",
+    "iupac_name": null,
+    "smiles": null,
+    "molecular_weight": 334.02,
+    "mechanism_of_action": "Antibody-drug conjugate of THR-beta; blocks downstream signalling implicated in obesity.",
+    "therapeutic_area": "metabolic disease",
+    "development_phase": "Phase 3",
+    "targets": [
+      "GLP-1R",
+      "THR-beta"
+    ]
+  },
+  {
+    "code": "CMP-0017",
+    "name": "Zeltinib",
+    "iupac_name": null,
+    "smiles": null,
+    "molecular_weight": 875.7,
+    "mechanism_of_action": "Covalent inhibitor of RNA polymerase; blocks downstream signalling implicated in tuberculosis.",
+    "therapeutic_area": "infectious disease",
+    "development_phase": "discovery",
+    "targets": [
+      "RNA polymerase",
+      "neuraminidase"
+    ]
+  },
+  {
+    "code": "CMP-0018",
+    "name": "Vorparib",
+    "iupac_name": null,
+    "smiles": null,
+    "molecular_weight": 912.91,
+    "mechanism_of_action": "Monoclonal antibody of factor XIa; blocks downstream signalling implicated in hypertension.",
+    "therapeutic_area": "cardiology",
+    "development_phase": "Phase 1",
+    "targets": [
+      "SGLT2",
+      "factor XIa"
+    ]
+  },
+  {
+    "code": "CMP-0019",
+    "name": "Prastat",
+    "iupac_name": null,
+    "smiles": null,
+    "molecular_weight": 453.85,
+    "mechanism_of_action": "Covalent inhibitor of BRCA1; blocks downstream signalling implicated in breast cancer.",
+    "therapeutic_area": "oncology",
+    "development_phase": "Phase 3",
+    "targets": [
+      "BRCA1",
+      "CDK4/6"
+    ]
+  },
+  {
+    "code": "CMP-0020",
+    "name": "Mirgliptin",
+    "iupac_name": null,
+    "smiles": null,
+    "molecular_weight": 606.43,
+    "mechanism_of_action": "Antibody-drug conjugate of TNF-alpha; blocks downstream signalling implicated in Crohn disease.",
+    "therapeutic_area": "immunology",
+    "development_phase": "Phase 2",
+    "targets": [
+      "TNF-alpha"
+    ]
+  },
+  {
+    "code": "CMP-0021",
+    "name": "Cadzumab",
+    "iupac_name": null,
+    "smiles": null,
+    "molecular_weight": 471.54,
+    "mechanism_of_action": "Selective small-molecule inhibitor of LRRK2; blocks downstream signalling implicated in Alzheimer disease.",
+    "therapeutic_area": "neurology",
+    "development_phase": "preclinical",
+    "targets": [
+      "LRRK2",
+      "amyloid-beta"
+    ]
+  },
+  {
+    "code": "CMP-0022",
+    "name": "Zelgliptin",
+    "iupac_name": null,
+    "smiles": null,
+    "molecular_weight": 349.41,
+    "mechanism_of_action": "Allosteric modulator of SGLT2; blocks downstream signalling implicated in type 2 diabetes.",
+    "therapeutic_area": "metabolic disease",
+    "development_phase": "Phase 2",
+    "targets": [
+      "SGLT2"
+    ]
+  },
+  {
+    "code": "CMP-0023",
+    "name": "Renparib",
+    "iupac_name": null,
+    "smiles": null,
+    "molecular_weight": 900.15,
+    "mechanism_of_action": "Allosteric modulator of InhA; blocks downstream signalling implicated in tuberculosis.",
+    "therapeutic_area": "infectious disease",
+    "development_phase": "Phase 1",
+    "targets": [
+      "InhA",
+      "neuraminidase"
+    ]
+  },
+  {
+    "code": "CMP-0024",
+    "name": "Talgliptin",
+    "iupac_name": null,
+    "smiles": null,
+    "molecular_weight": 457.96,
+    "mechanism_of_action": "Degrader (protac) of PCSK9; blocks downstream signalling implicated in hypertension.",
+    "therapeutic_area": "cardiology",
+    "development_phase": "preclinical",
+    "targets": [
+      "PCSK9",
+      "SGLT2"
+    ]
+  }
+]

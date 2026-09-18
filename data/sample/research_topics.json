@@ -1,0 +1,93 @@
+[
+  {
+    "name": "Breast cancer biomarkers",
+    "slug": "breast-cancer-biomarkers",
+    "description": "Prognostic and predictive biomarkers for breast cancer subtypes, with a focus on HER2 status, BRCA1 methylation and circulating tumour DNA.",
+    "research_area": "oncology",
+    "keywords": [
+      "breast cancer",
+      "biomarker",
+      "HER2",
+      "ctDNA",
+      "BRCA1"
+    ]
+  },
+  {
+    "name": "PARP inhibition in solid tumours",
+    "slug": "parp-inhibition-in-solid-tumours",
+    "description": "Synthetic lethality via PARP inhibition in homologous-recombination-deficient tumours.",
+    "research_area": "oncology",
+    "keywords": [
+      "PARP1",
+      "synthetic lethality",
+      "BRCA",
+      "olaparib-like"
+    ]
+  },
+  {
+    "name": "Checkpoint blockade response prediction",
+    "slug": "checkpoint-blockade-response-prediction",
+    "description": "Predicting response to PD-L1 blockade from tumour microenvironment features.",
+    "research_area": "oncology",
+    "keywords": [
+      "PD-L1",
+      "immunotherapy",
+      "tumour microenvironment"
+    ]
+  },
+  {
+    "name": "JAK pathway modulation",
+    "slug": "jak-pathway-modulation",
+    "description": "Selective JAK1 inhibition in inflammatory disease and its safety profile.",
+    "research_area": "immunology",
+    "keywords": [
+      "JAK1",
+      "inflammation",
+      "rheumatoid arthritis"
+    ]
+  },
+  {
+    "name": "Amyloid and tau co-pathology",
+    "slug": "amyloid-and-tau-co-pathology",
+    "description": "Interaction between amyloid-beta burden and tau propagation in early Alzheimer disease.",
+    "research_area": "neurology",
+    "keywords": [
+      "amyloid-beta",
+      "tau",
+      "Alzheimer disease"
+    ]
+  },
+  {
+    "name": "Incretin-based metabolic therapy",
+    "slug": "incretin-based-metabolic-therapy",
+    "description": "GLP-1 receptor agonism for glycaemic control and weight reduction.",
+    "research_area": "metabolic disease",
+    "keywords": [
+      "GLP-1R",
+      "type 2 diabetes",
+      "obesity"
+    ]
+  },
+  {
+    "name": "Cardiometabolic risk reduction",
+    "slug": "cardiometabolic-risk-reduction",
+    "description": "SGLT2 inhibition and PCSK9 modulation for cardiovascular outcome improvement.",
+    "research_area": "cardiology",
+    "keywords": [
+      "SGLT2",
+      "PCSK9",
+      "heart failure"
+    ]
+  },
+  {
+    "name": "Antimicrobial resistance mechanisms",
+    "slug": "antimicrobial-resistance-mechanisms",
+    "description": "Resistance emergence against InhA and RNA polymerase inhibitors.",
+    "research_area": "infectious disease",
+    "keywords": [
+      "tuberculosis",
+      "resistance",
+      "InhA"
+    ]
+  }
+]

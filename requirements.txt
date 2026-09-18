@@ -1,0 +1,56 @@
+# Direct runtime dependencies, pinned.
+# Fully-resolved transitive closure lives in requirements.lock.txt
+# (generated with `uv pip compile requirements.txt -o requirements.lock.txt`).
+
+# --- Web / API ---------------------------------------------------------------
+fastapi==0.141.1
+uvicorn[standard]==0.53.0
+gunicorn==26.2.0
+python-multipart==0.0.32
+
+# --- Validation / settings ---------------------------------------------------
+pydantic==2.13.5
+email-validator==2.3.0          # pydantic EmailStr
+pydantic-settings==2.15.0
+
+# --- Database ----------------------------------------------------------------
+sqlalchemy==2.0.54
+alembic==1.20.0
+psycopg[binary,pool]==3.3.6     # psycopg 3: one driver, sync + async
+pgvector==0.5.0
+
+# --- Cache / queue -----------------------------------------------------------
+redis==6.4.0
+celery[redis]==5.6.3
+
+# --- HTTP client -------------------------------------------------------------
+httpx==0.28.1
+
+# --- LLM / agent -------------------------------------------------------------
+openai==3.16.0
+langgraph==1.2.11
+langgraph-checkpoint-postgres==3.1.2
+langchain-core==1.6.3
+langsmith==0.12.6
+
+# --- MCP ---------------------------------------------------------------------
+mcp==2.2.0
+
+# --- Security ----------------------------------------------------------------
+pyjwt[crypto]==2.14.0           # actively maintained; python-jose is not
+pwdlib[argon2]==0.3.1           # Argon2id password hashing
+
+# --- Documents / storage -----------------------------------------------------
+pymupdf==1.28.2
+boto3==1.43.97
+
+# --- Observability -----------------------------------------------------------
+structlog==26.1.0
+opentelemetry-api==1.44.0
+opentelemetry-sdk==1.44.0
+opentelemetry-exporter-otlp-proto-http==1.44.0
+opentelemetry-instrumentation-fastapi==0.65b0
+
+# --- Resilience / misc -------------------------------------------------------
+tenacity==9.1.4
+orjson==3.12.0
