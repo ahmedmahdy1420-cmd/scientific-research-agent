@@ -1,0 +1,94 @@
+[project]
+name = "scientific-research-agent"
+version = "0.1.0"
+description = "Production-style agentic AI research assistant: FastAPI + LangGraph + RAG (pgvector) + MCP."
+requires-python = ">=3.12"
+readme = "README.md"
+
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["app*", "mock_services*"]
+
+# ---------------------------------------------------------------------------
+# Ruff: lint + format. Matches what CI runs.
+# ---------------------------------------------------------------------------
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["."]
+
+[tool.ruff.lint]
+select = [
+    "E", "W",   # pycodestyle
+    "F",        # pyflakes
+    "I",        # isort
+    "B",        # bugbear
+    "C4",       # comprehensions
+    "UP",       # pyupgrade
+    "ASYNC",    # async correctness
+    "BLE",      # no blind except
+    "S",        # bandit security rules
+    "T20",      # no stray print()
+    "RUF",
+]
+ignore = [
+    "S101",   # assert: fine in tests
+    "B008",   # FastAPI Depends() in defaults is the documented idiom
+    "S104",   # binding 0.0.0.0 inside a container is intended
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S105", "S106", "S311"]
+# Data-generation scripts hold long prose templates; wrapping them hurts
+# readability more than the line length does.
+"scripts/*" = ["T20", "S311", "E501"]
+"alembic/*" = ["E501"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["app", "mock_services"]
+# `app/mcp/` shadows the third-party `mcp` SDK for the import classifier.
+known-third-party = ["mcp"]
+
+# ---------------------------------------------------------------------------
+# mypy
+# ---------------------------------------------------------------------------
+[tool.mypy]
+python_version = "3.12"
+plugins = ["pydantic.mypy"]
+warn_unused_configs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+no_implicit_optional = true
+strict_equality = true
+warn_return_any = true
+ignore_missing_imports = true
+exclude = "(^alembic/|^frontend/)"
+
+[[tool.mypy.overrides]]
+module = ["tests.*", "scripts.*"]
+disallow_untyped_defs = false
+
+# ---------------------------------------------------------------------------
+# pytest
+# ---------------------------------------------------------------------------
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+addopts = "-q --strict-markers"
+markers = [
+    "unit: fast, no external services",
+    "integration: needs postgres/redis from docker compose",
+    "live: calls the real OpenAI API; needs OPENAI_API_KEY and RUN_LIVE_AI_TESTS=1",
+]
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.coverage.run]
+source = ["app"]
+omit = ["app/mcp/__main__.py"]

@@ -1,0 +1,182 @@
+# One command brings up the whole system:  docker compose up --build
+#
+#   api                http://localhost:8000      (OpenAPI: /docs)
+#   frontend           http://localhost:5173
+#   mock-clinical-api  http://localhost:8001/docs
+#   mcp                http://localhost:8020/mcp  (streamable HTTP)
+#   postgres           localhost:5432
+#   redis              localhost:6379
+
+name: scientific-research-agent
+
+x-app-env: &app-env
+  env_file: [.env]
+  environment:
+    DATABASE_URL: postgresql+psycopg://research:research@postgres:5432/research
+    DATABASE_READONLY_URL: postgresql+psycopg://research_ro:research_ro@postgres:5432/research
+    REDIS_URL: redis://redis:6379/0
+    CELERY_BROKER_URL: redis://redis:6379/1
+    CELERY_RESULT_BACKEND: redis://redis:6379/2
+    CLINICAL_TRIALS_API_URL: http://mock-clinical-api:8001
+    MCP_SERVER_URL: http://mcp:8020/mcp
+    LOCAL_STORAGE_PATH: /app/storage
+
+x-app-build: &app-build
+  build:
+    context: .
+    args:
+      INSTALL_DEV: "true"     # local image also carries pytest/ruff/mypy
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg17
+    environment:
+      POSTGRES_USER: research
+      POSTGRES_PASSWORD: research
+      POSTGRES_DB: research
+    ports: ["5432:5432"]
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./docker/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U research -d research"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--appendonly", "yes", "--maxmemory", "256mb", "--maxmemory-policy", "allkeys-lru"]
+    ports: ["6379:6379"]
+    volumes: [redisdata:/data]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  # Runs migrations + seeds sample data, then exits. Everything else waits on it.
+  migrate:
+    <<: [*app-build, *app-env]
+    image: sra-app:latest
+    command: ["bash", "-c", "alembic upgrade head && python -m scripts.seed_data --with-pdfs"]
+    volumes:
+      - ./storage:/app/storage
+    depends_on:
+      postgres: {condition: service_healthy}
+      redis: {condition: service_healthy}
+    restart: "no"
+
+  api:
+    <<: [*app-build, *app-env]
+    image: sra-app:latest
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--proxy-headers"]
+    ports: ["8000:8000"]
+    volumes:
+      - ./storage:/app/storage
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8000/api/v1/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+
+  celery-worker:
+    <<: [*app-build, *app-env]
+    image: sra-app:latest
+    command: ["celery", "-A", "app.workers.celery_app.celery_app", "worker",
+              "--loglevel=INFO", "--concurrency=2", "-Q", "ingestion,evaluation,default"]
+    volumes:
+      - ./storage:/app/storage
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+    healthcheck:
+      test: ["CMD", "celery", "-A", "app.workers.celery_app.celery_app", "inspect", "ping", "-d", "celery@$$HOSTNAME"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+
+  # Scheduler for periodic maintenance (expiring abandoned approval requests).
+  # Separate from the worker because exactly one beat process may run.
+  celery-beat:
+    <<: [*app-build, *app-env]
+    image: sra-app:latest
+    # The schedule file goes on the writable volume: the image runs as a
+    # non-root user and /app is not writable.
+    command: ["celery", "-A", "app.workers.celery_app.celery_app", "beat",
+              "--loglevel=INFO", "--schedule", "/app/storage/celerybeat-schedule"]
+    volumes:
+      - ./storage:/app/storage
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+
+  mcp:
+    <<: [*app-build, *app-env]
+    image: sra-app:latest
+    command: ["python", "-m", "app.mcp", "--transport", "streamable-http"]
+    ports: ["8020:8020"]
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+
+  mock-clinical-api:
+    <<: [*app-build, *app-env]
+    image: sra-app:latest
+    command: ["uvicorn", "mock_services.clinical_trials_api.main:app", "--host", "0.0.0.0", "--port", "8001"]
+    ports: ["8001:8001"]
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8001/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  # Tooling container for tests, lint and type checking.
+  #
+  # Deliberately separate from `api`: the API image is a production artefact
+  # and ships neither the test suite nor a writable working directory. This
+  # service mounts the source read-write and redirects tool caches to /tmp.
+  #
+  # Not started by `docker compose up` - it lives behind a profile and is run
+  # one-off by the Makefile.
+  dev:
+    <<: [*app-build, *app-env]
+    image: sra-app:latest
+    profiles: ["tools"]
+    working_dir: /app
+    user: root
+    environment:
+      DATABASE_URL: postgresql+psycopg://research:research@postgres:5432/research
+      DATABASE_READONLY_URL: postgresql+psycopg://research_ro:research_ro@postgres:5432/research
+      REDIS_URL: redis://redis:6379/0
+      CELERY_BROKER_URL: redis://redis:6379/1
+      CELERY_RESULT_BACKEND: redis://redis:6379/2
+      CLINICAL_TRIALS_API_URL: http://mock-clinical-api:8001
+      MCP_SERVER_URL: http://mcp:8020/mcp
+      LOCAL_STORAGE_PATH: /app/storage
+      RUFF_CACHE_DIR: /tmp/.ruff_cache
+      MYPY_CACHE_DIR: /tmp/.mypy_cache
+      PYTHONDONTWRITEBYTECODE: "1"
+    volumes:
+      - .:/app
+    command: ["true"]
+    depends_on:
+      postgres: {condition: service_healthy}
+      redis: {condition: service_healthy}
+
+  frontend:
+    build:
+      context: ./frontend
+    environment:
+      # Empty base URL => same-origin requests, proxied by Vite to the api
+      # service. Avoids CORS entirely in local development.
+      VITE_API_BASE_URL: ""
+      VITE_API_PROXY_TARGET: http://api:8000
+    ports: ["5173:5173"]
+    depends_on:
+      api: {condition: service_started}
+
+volumes:
+  pgdata:
+  redisdata:

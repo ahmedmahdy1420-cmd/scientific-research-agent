@@ -1,0 +1,548 @@
+[
+  {
+    "registry_id": "NCT40001237",
+    "title": "A Phase 2 study of Rentinib in participants with melanoma",
+    "condition": "melanoma",
+    "intervention": "Rentinib (CMP-0001)",
+    "phase": "Phase 2",
+    "status": "completed",
+    "sponsor": "Meridian Oncology Group",
+    "enrollment": 102,
+    "start_date": "2023-08-02",
+    "completion_date": "2027-01-05",
+    "primary_outcome": "Incidence of treatment-emergent adverse events",
+    "summary": "This phase 2 study evaluates Rentinib, a peptide agonist of cdk4/6, in adults with melanoma. Synthetic record for demonstration purposes only.",
+    "locations": [
+      "Leiden, NL"
+    ],
+    "compound_code": "CMP-0001"
+  },
+  {
+    "registry_id": "NCT40002474",
+    "title": "A Phase 2 study of Renciclib in participants with Crohn disease",
+    "condition": "Crohn disease",
+    "intervention": "Renciclib (CMP-0002)",
+    "phase": "Phase 2",
+    "status": "completed",
+    "sponsor": "Northfield Therapeutics",
+    "enrollment": 222,
+    "start_date": "2024-03-06",
+    "completion_date": "2026-05-23",
+    "primary_outcome": "Incidence of treatment-emergent adverse events",
+    "summary": "This phase 2 study evaluates Renciclib, a degrader (protac) of tnf-alpha, in adults with Crohn disease. Synthetic record for demonstration purposes only.",
+    "locations": [
+      "Kyoto, JP",
+      "Toronto, CA"
+    ],
+    "compound_code": "CMP-0002"
+  },
+  {
+    "registry_id": "NCT40003711",
+    "title": "A Phase 2 study of Talparib in participants with Alzheimer disease",
+    "condition": "Alzheimer disease",
+    "intervention": "Talparib (CMP-0003)",
+    "phase": "Phase 2",
+    "status": "completed",
+    "sponsor": "Orion Academic Consortium",
+    "enrollment": 269,
+    "start_date": "2022-12-11",
+    "completion_date": "2024-03-29",
+    "primary_outcome": "Change from baseline in disease activity score",
+    "summary": "This phase 2 study evaluates Talparib, a selective small-molecule inhibitor of amyloid-beta, in adults with Alzheimer disease. Synthetic record for demonstration purposes only.",
+    "locations": [
+      "Cambridge, UK",
+      "Leiden, NL"
+    ],
+    "compound_code": "CMP-0003"
+  },
+  {
+    "registry_id": "NCT40004948",
+    "title": "A Phase 3 study of Ostgliptin in participants with type 2 diabetes",
+    "condition": "type 2 diabetes",
+    "intervention": "Ostgliptin (CMP-0004)",
+    "phase": "Phase 3",
+    "status": "recruiting",
+    "sponsor": "Helix Clinical Network",
+    "enrollment": 1062,
+    "start_date": "2024-10-07",
+    "completion_date": null,
+    "primary_outcome": "Objective response rate at 24 weeks",
+    "summary": "This phase 3 study evaluates Ostgliptin, a covalent inhibitor of sglt2, in adults with type 2 diabetes. Synthetic record for demonstration purposes only.",
+    "locations": [
+      "Leiden, NL",
+      "Kyoto, JP"
+    ],
+    "compound_code": "CMP-0004"
+  },
+  {
+    "registry_id": "NCT40006185",
+    "title": "A Phase 1 study of Prastat in participants with tuberculosis",
+    "condition": "tuberculosis",
+    "intervention": "Prastat (CMP-0005)",
+    "phase": "Phase 1",
+    "status": "completed",
+    "sponsor": "Cavendish Biosciences",
+    "enrollment": 33,
+    "start_date": "2022-05-11",
+    "completion_date": "2023-02-21",
+    "primary_outcome": "Objective response rate at 24 weeks",
+    "summary": "This phase 1 study evaluates Prastat, a selective small-molecule inhibitor of inha, in adults with tuberculosis. Synthetic record for demonstration purposes only.",
+    "locations": [
+      "Cambridge, UK",
+      "Leiden, NL",
+      "Kyoto, JP",
+      "Boston, US"
+    ],
+    "compound_code": "CMP-0005"
+  },
+  {
+    "registry_id": "NCT40007422",
+    "title": "A Phase 3 study of Mirzumab in participants with heart failure",
+    "condition": "heart failure",
+    "intervention": "Mirzumab (CMP-0006)",
+    "phase": "Phase 3",
+    "status": "active_not_recruiting",
+    "sponsor": "Helix Clinical Network",
+    "enrollment": 1745,
+    "start_date": "2022-08-08",
+    "completion_date": null,
+    "primary_outcome": "Overall survival at 36 months",
+    "summary": "This phase 3 study evaluates Mirzumab, a allosteric modulator of pcsk9, in adults with heart failure. Synthetic record for demonstration purposes only.",
+    "locations": [
+      "Cambridge, UK",
+      "Basel, CH"
+    ],
+    "compound_code": "CMP-0006"
+  },
+  {
+    "registry_id": "NCT40008659",
+    "title": "A Phase 1 study of Vorstat in participants with breast cancer",
+    "condition": "breast cancer",
+    "intervention": "Vorstat (CMP-0007)",
+    "phase": "Phase 1",
+    "status": "terminated",
+    "sponsor": "Cavendish Biosciences",
+    "enrollment": 44,
+    "start_date": "2021-11-19",
+    "completion_date": "2025-12-26",
+    "primary_outcome": "Progression-free survival",
+    "summary": "This phase 1 study evaluates Vorstat, a antibody-drug conjugate of parp1, in adults with breast cancer. Synthetic record for demonstration purposes only.",
+    "locations": [
+      "Kyoto, JP",
+      "Cambridge, UK"
+    ],
+    "compound_code": "CMP-0007"
+  },
+  {
+    "registry_id": "NCT40009896",
+    "title": "A Phase 1 study of Pratinib in participants with psoriasis",
+    "condition": "psoriasis",
+    "intervention": "Pratinib (CMP-0008)",
+    "phase": "Phase 1",
+    "status": "completed",
+    "sponsor": "Cavendish Biosciences",
+    "enrollment": 49,
+    "start_date": "2024-06-20",
+    "completion_date": "2025-09-15",
+    "primary_outcome": "Progression-free survival",
+    "summary": "This phase 1 study evaluates Pratinib, a peptide agonist of il-17a, in adults with psoriasis. Synthetic record for demonstration purposes only.",
+    "locations": [
+      "Boston, US",
+      "Kyoto, JP"
+    ],
+    "compound_code": "CMP-0008"
+  },
+  {
+    "registry_id": "NCT40011133",
+    "title": "A Phase 2 study of Talmab in participants with multiple sclerosis",
+    "condition": "multiple sclerosis",
+    "intervention": "Talmab (CMP-0009)",
+    "phase": "Phase 2",
+    "status": "completed",
+    "sponsor": "Meridian Oncology Group",
+    "enrollment": 114,
+    "start_date": "2022-11-19",
+    "completion_date": "2023-07-27",
+    "primary_outcome": "Incidence of treatment-emergent adverse events",
+    "summary": "This phase 2 study evaluates Talmab, a allosteric modulator of lrrk2, in adults with multiple sclerosis. Synthetic record for demonstration purposes only.",
+    "locations": [
+      "Cambridge, UK",
+      "Leiden, NL",
+      "Basel, CH"
+    ],
+    "compound_code": "CMP-0009"
+  },
+  {
+    "registry_id": "NCT40012370",
+    "title": "A Phase 2 study of Ostzumab in participants with NASH",
+    "condition": "NASH",
+    "intervention": "Ostzumab (CMP-0010)",
+    "phase": "Phase 2",
+    "status": "active_not_recruiting",
+    "sponsor": "Orion Academic Consortium",
+    "enrollment": 140,
+    "start_date": "2024-03-27",
+    "completion_date": null,
+    "primary_outcome": "Progression-free survival",
+    "summary": "This phase 2 study evaluates Ostzumab, a allosteric modulator of sglt2, in adults with NASH. Synthetic record for demonstration purposes only.",
+    "locations": [
+      "Kyoto, JP"
+    ],
+    "compound_code": "CMP-0010"
+  },
+  {
+    "registry_id": "NCT40013607",
+    "title": "A Phase 2 study of Nelciclib in participants with hepatitis B",
+    "condition": "hepatitis B",
+    "intervention": "Nelciclib (CMP-0011)",
+    "phase": "Phase 2",
+    "status": "completed",
+    "sponsor": "Cavendish Biosciences",
+    "enrollment": 206,
+    "start_date": "2024-02-23",
+    "completion_date": "2025-11-07",
+    "primary_outcome": "Change from baseline in disease activity score",
+    "summary": "This phase 2 study evaluates Nelciclib, a selective small-molecule inhibitor of neuraminidase, in adults with hepatitis B. Synthetic record for demonstration purposes only.",
+    "locations": [
+      "Toronto, CA",
+      "Basel, CH",
+      "Kyoto, JP",
+      "Leiden, NL"
+    ],
+    "compound_code": "CMP-0011"
+  },
+  {
+    "registry_id": "NCT40014844",
+    "title": "A Phase 2 study of Zeltinib in participants with heart failure",
+    "condition": "heart failure",
+    "intervention": "Zeltinib (CMP-0012)",
+    "phase": "Phase 2",
+    "status": "completed",
+    "sponsor": "Meridian Oncology Group",
+    "enrollment": 149,
+    "start_date": "2021-08-02",
+    "completion_date": "2024-01-12",
+    "primary_outcome": "Incidence of treatment-emergent adverse events",
+    "summary": "This phase 2 study evaluates Zeltinib, a selective small-molecule inhibitor of factor xia, in adults with heart failure. Synthetic record for demonstration purposes only.",
+    "locations": [
+      "Leiden, NL",
+      "Toronto, CA",
+      "Basel, CH",
+      "Kyoto, JP"
+    ],
+    "compound_code": "CMP-0012"
+  },
+  {
+    "registry_id": "NCT40016081",
+    "title": "A Phase 3 study of Nelparib in participants with pancreatic cancer",
+    "condition": "pancreatic cancer",
+    "intervention": "Nelparib (CMP-0013)",
+    "phase": "Phase 3",
+    "status": "completed",
+    "sponsor": "Cavendish Biosciences",
+    "enrollment": 1212,
+    "start_date": "2023-03-11",
+    "completion_date": "2026-02-28",
+    "primary_outcome": "Incidence of treatment-emergent adverse events",
+    "summary": "This phase 3 study evaluates Nelparib, a allosteric modulator of parp1, in adults with pancreatic cancer. Synthetic record for demonstration purposes only.",
+    "locations": [
+      "Kyoto, JP",
+      "Cambridge, UK",
+      "Boston, US",
+      "Toronto, CA"
+    ],
+    "compound_code": "CMP-0013"
+  },
+  {
+    "registry_id": "NCT40017318",
+    "title": "A Phase 2 study of Mirstat in participants with rheumatoid arthritis",
+    "condition": "rheumatoid arthritis",
+    "intervention": "Mirstat (CMP-0014)",
+    "phase": "Phase 2",
+    "status": "recruiting",
+    "sponsor": "Cavendish Biosciences",
+    "enrollment": 303,
+    "start_date": "2024-07-30",
+    "completion_date": null,
+    "primary_outcome": "Objective response rate at 24 weeks",
+    "summary": "This phase 2 study evaluates Mirstat, a covalent inhibitor of tnf-alpha, in adults with rheumatoid arthritis. Synthetic record for demonstration purposes only.",
+    "locations": [
+      "Kyoto, JP",
+      "Cambridge, UK"
+    ],
+    "compound_code": "CMP-0014"
+  },
+  {
+    "registry_id": "NCT40018555",
+    "title": "A Phase 1 study of Cadciclib in participants with Parkinson disease",
+    "condition": "Parkinson disease",
+    "intervention": "Cadciclib (CMP-0015)",
+    "phase": "Phase 1",
+    "status": "completed",
+    "sponsor": "Northfield Therapeutics",
+    "enrollment": 54,
+    "start_date": "2023-01-30",
+    "completion_date": "2024-05-14",
+    "primary_outcome": "Incidence of treatment-emergent adverse events",
+    "summary": "This phase 1 study evaluates Cadciclib, a antibody-drug conjugate of lrrk2, in adults with Parkinson disease. Synthetic record for demonstration purposes only.",
+    "locations": [
+      "Kyoto, JP",
+      "Cambridge, UK",
+      "Basel, CH",
+      "Boston, US"
+    ],
+    "compound_code": "CMP-0015"
+  },
+  {
+    "registry_id": "NCT40019792",
+    "title": "A Phase 3 study of Talmab in participants with type 2 diabetes",
+    "condition": "type 2 diabetes",
+    "intervention": "Talmab (CMP-0016)",
+    "phase": "Phase 3",
+    "status": "completed",
+    "sponsor": "Orion Academic Consortium",
+    "enrollment": 1649,
+    "start_date": "2023-02-27",
+    "completion_date": "2026-09-19",
+    "primary_outcome": "Progression-free survival",
+    "summary": "This phase 3 study evaluates Talmab, a antibody-drug conjugate of thr-beta, in adults with type 2 diabetes. Synthetic record for demonstration purposes only.",
+    "locations": [
+      "Leiden, NL",
+      "Cambridge, UK",
+      "Basel, CH"
+    ],
+    "compound_code": "CMP-0016"
+  },
+  {
+    "registry_id": "NCT40021029",
+    "title": "A Phase 1 study of Zeltinib in participants with influenza A",
+    "condition": "influenza A",
+    "intervention": "Zeltinib (CMP-0017)",
+    "phase": "Phase 1",
+    "status": "recruiting",
+    "sponsor": "Meridian Oncology Group",
+    "enrollment": 23,
+    "start_date": "2024-07-23",
+    "completion_date": null,
+    "primary_outcome": "Change from baseline in disease activity score",
+    "summary": "This phase 1 study evaluates Zeltinib, a covalent inhibitor of rna polymerase, in adults with influenza A. Synthetic record for demonstration purposes only.",
+    "locations": [
+      "Cambridge, UK",
+      "Basel, CH"
+    ],
+    "compound_code": "CMP-0017"
+  },
+  {
+    "registry_id": "NCT40022266",
+    "title": "A Phase 2 study of Vorparib in participants with heart failure",
+    "condition": "heart failure",
+    "intervention": "Vorparib (CMP-0018)",
+    "phase": "Phase 2",
+    "status": "recruiting",
+    "sponsor": "Meridian Oncology Group",
+    "enrollment": 213,
+    "start_date": "2021-05-26",
+    "completion_date": null,
+    "primary_outcome": "Objective response rate at 24 weeks",
+    "summary": "This phase 2 study evaluates Vorparib, a monoclonal antibody of factor xia, in adults with heart failure. Synthetic record for demonstration purposes only.",
+    "locations": [
+      "Toronto, CA"
+    ],
+    "compound_code": "CMP-0018"
+  },
+  {
+    "registry_id": "NCT40023503",
+    "title": "A Phase 3 study of Prastat in participants with colorectal cancer",
+    "condition": "colorectal cancer",
+    "intervention": "Prastat (CMP-0019)",
+    "phase": "Phase 3",
+    "status": "recruiting",
+    "sponsor": "Northfield Therapeutics",
+    "enrollment": 1107,
+    "start_date": "2022-08-12",
+    "completion_date": null,
+    "primary_outcome": "Incidence of treatment-emergent adverse events",
+    "summary": "This phase 3 study evaluates Prastat, a covalent inhibitor of brca1, in adults with colorectal cancer. Synthetic record for demonstration purposes only.",
+    "locations": [
+      "Kyoto, JP",
+      "Basel, CH",
+      "Boston, US"
+    ],
+    "compound_code": "CMP-0019"
+  },
+  {
+    "registry_id": "NCT40024740",
+    "title": "A Phase 3 study of Mirgliptin in participants with rheumatoid arthritis",
+    "condition": "rheumatoid arthritis",
+    "intervention": "Mirgliptin (CMP-0020)",
+    "phase": "Phase 3",
+    "status": "active_not_recruiting",
+    "sponsor": "Cavendish Biosciences",
+    "enrollment": 910,
+    "start_date": "2022-04-26",
+    "completion_date": null,
+    "primary_outcome": "Progression-free survival",
+    "summary": "This phase 3 study evaluates Mirgliptin, a antibody-drug conjugate of tnf-alpha, in adults with rheumatoid arthritis. Synthetic record for demonstration purposes only.",
+    "locations": [
+      "Leiden, NL",
+      "Kyoto, JP",
+      "Cambridge, UK"
+    ],
+    "compound_code": "CMP-0020"
+  },
+  {
+    "registry_id": "NCT40025977",
+    "title": "A Phase 4 study of Cadzumab in participants with Parkinson disease",
+    "condition": "Parkinson disease",
+    "intervention": "Cadzumab (CMP-0021)",
+    "phase": "Phase 4",
+    "status": "completed",
+    "sponsor": "Cavendish Biosciences",
+    "enrollment": 1447,
+    "start_date": "2021-02-17",
+    "completion_date": "2024-12-23",
+    "primary_outcome": "Change from baseline in disease activity score",
+    "summary": "This phase 4 study evaluates Cadzumab, a selective small-molecule inhibitor of lrrk2, in adults with Parkinson disease. Synthetic record for demonstration purposes only.",
+    "locations": [
+      "Cambridge, UK"
+    ],
+    "compound_code": "CMP-0021"
+  },
+  {
+    "registry_id": "NCT40027214",
+    "title": "A Phase 2 study of Zelgliptin in participants with NASH",
+    "condition": "NASH",
+    "intervention": "Zelgliptin (CMP-0022)",
+    "phase": "Phase 2",
+    "status": "recruiting",
+    "sponsor": "Cavendish Biosciences",
+    "enrollment": 252,
+    "start_date": "2021-12-17",
+    "completion_date": null,
+    "primary_outcome": "Incidence of treatment-emergent adverse events",
+    "summary": "This phase 2 study evaluates Zelgliptin, a allosteric modulator of sglt2, in adults with NASH. Synthetic record for demonstration purposes only.",
+    "locations": [
+      "Boston, US"
+    ],
+    "compound_code": "CMP-0022"
+  },
+  {
+    "registry_id": "NCT40028451",
+    "title": "A Phase 1 study of Renparib in participants with hepatitis B",
+    "condition": "hepatitis B",
+    "intervention": "Renparib (CMP-0023)",
+    "phase": "Phase 1",
+    "status": "recruiting",
+    "sponsor": "Cavendish Biosciences",
+    "enrollment": 22,
+    "start_date": "2021-11-22",
+    "completion_date": null,
+    "primary_outcome": "Change from baseline in disease activity score",
+    "summary": "This phase 1 study evaluates Renparib, a allosteric modulator of inha, in adults with hepatitis B. Synthetic record for demonstration purposes only.",
+    "locations": [
+      "Basel, CH"
+    ],
+    "compound_code": "CMP-0023"
+  },
+  {
+    "registry_id": "NCT40029688",
+    "title": "A Phase 2 study of Talgliptin in participants with heart failure",
+    "condition": "heart failure",
+    "intervention": "Talgliptin (CMP-0024)",
+    "phase": "Phase 2",
+    "status": "withdrawn",
+    "sponsor": "Northfield Therapeutics",
+    "enrollment": 259,
+    "start_date": "2023-07-12",
+    "completion_date": null,
+    "primary_outcome": "Overall survival at 36 months",
+    "summary": "This phase 2 study evaluates Talgliptin, a degrader (protac) of pcsk9, in adults with heart failure. Synthetic record for demonstration purposes only.",
+    "locations": [
+      "Boston, US",
+      "Kyoto, JP",
+      "Leiden, NL",
+      "Cambridge, UK"
+    ],
+    "compound_code": "CMP-0024"
+  },
+  {
+    "registry_id": "NCT40030925",
+    "title": "A Phase 4 study of Rentinib in participants with glioblastoma",
+    "condition": "glioblastoma",
+    "intervention": "Rentinib (CMP-0001)",
+    "phase": "Phase 4",
+    "status": "recruiting",
+    "sponsor": "Cavendish Biosciences",
+    "enrollment": 3127,
+    "start_date": "2023-01-31",
+    "completion_date": null,
+    "primary_outcome": "Progression-free survival",
+    "summary": "This phase 4 study evaluates Rentinib, a peptide agonist of cdk4/6, in adults with glioblastoma. Synthetic record for demonstration purposes only.",
+    "locations": [
+      "Boston, US",
+      "Leiden, NL",
+      "Cambridge, UK",
+      "Kyoto, JP"
+    ],
+    "compound_code": "CMP-0001"
+  },
+  {
+    "registry_id": "NCT40032162",
+    "title": "A Phase 3 study of Renciclib in participants with psoriasis",
+    "condition": "psoriasis",
+    "intervention": "Renciclib (CMP-0002)",
+    "phase": "Phase 3",
+    "status": "completed",
+    "sponsor": "Orion Academic Consortium",
+    "enrollment": 621,
+    "start_date": "2025-06-09",
+    "completion_date": "2026-01-17",
+    "primary_outcome": "Incidence of treatment-emergent adverse events",
+    "summary": "This phase 3 study evaluates Renciclib, a degrader (protac) of tnf-alpha, in adults with psoriasis. Synthetic record for demonstration purposes only.",
+    "locations": [
+      "Toronto, CA",
+      "Kyoto, JP"
+    ],
+    "compound_code": "CMP-0002"
+  },
+  {
+    "registry_id": "NCT40033399",
+    "title": "A Phase 3 study of Talparib in participants with Parkinson disease",
+    "condition": "Parkinson disease",
+    "intervention": "Talparib (CMP-0003)",
+    "phase": "Phase 3",
+    "status": "terminated",
+    "sponsor": "Cavendish Biosciences",
+    "enrollment": 1174,
+    "start_date": "2024-05-08",
+    "completion_date": "2026-07-21",
+    "primary_outcome": "Overall survival at 36 months",
+    "summary": "This phase 3 study evaluates Talparib, a selective small-molecule inhibitor of amyloid-beta, in adults with Parkinson disease. Synthetic record for demonstration purposes only.",
+    "locations": [
+      "Kyoto, JP",
+      "Basel, CH",
+      "Cambridge, UK",
+      "Leiden, NL"
+    ],
+    "compound_code": "CMP-0003"
+  },
+  {
+    "registry_id": "NCT40034636",
+    "title": "A Phase 1 study of Ostgliptin in participants with type 2 diabetes",
+    "condition": "type 2 diabetes",
+    "intervention": "Ostgliptin (CMP-0004)",
+    "phase": "Phase 1",
+    "status": "terminated",
+    "sponsor": "Orion Academic Consortium",
+    "enrollment": 25,
+    "start_date": "2021-12-21",
+    "completion_date": "2025-11-15",
+    "primary_outcome": "Objective response rate at 24 weeks",
+    "summary": "This phase 1 study evaluates Ostgliptin, a covalent inhibitor of sglt2, in adults with type 2 diabetes. Synthetic record for demonstration purposes only.",
+    "locations": [
+      "Boston, US",
+      "Leiden, NL"
+    ],
+    "compound_code": "CMP-0004"
+  }
+]

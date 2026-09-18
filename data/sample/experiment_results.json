@@ -1,0 +1,752 @@
+[
+  {
+    "experiment_code": "EXP-0001",
+    "metric_name": "target engagement",
+    "metric_value": 38.654,
+    "unit": "%",
+    "p_value": 0.048,
+    "confidence_interval": "[31.696, 45.612]",
+    "evidence_strength": "moderate",
+    "conclusion": "target engagement of 38.654 % (statistically significant, p=0.048). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0001",
+    "metric_name": "biomarker expression change",
+    "metric_value": 1.774,
+    "unit": "log2FC",
+    "p_value": 0.034,
+    "confidence_interval": "[1.455, 2.093]",
+    "evidence_strength": "moderate",
+    "conclusion": "biomarker expression change of 1.774 log2FC (statistically significant, p=0.034). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0001",
+    "metric_name": "IC50",
+    "metric_value": 767.625,
+    "unit": "nM",
+    "p_value": 0.002,
+    "confidence_interval": "[629.452, 905.797]",
+    "evidence_strength": "strong",
+    "conclusion": "IC50 of 767.625 nM (statistically significant, p=0.002). Evidence graded strong."
+  },
+  {
+    "experiment_code": "EXP-0002",
+    "metric_name": "cell viability",
+    "metric_value": 75.062,
+    "unit": "%",
+    "p_value": 0.011,
+    "confidence_interval": "[61.551, 88.573]",
+    "evidence_strength": "moderate",
+    "conclusion": "cell viability of 75.062 % (statistically significant, p=0.011). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0002",
+    "metric_name": "biomarker expression change",
+    "metric_value": -1.243,
+    "unit": "log2FC",
+    "p_value": 0.011,
+    "confidence_interval": "[-1.019, -1.467]",
+    "evidence_strength": "moderate",
+    "conclusion": "biomarker expression change of -1.243 log2FC (statistically significant, p=0.011). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0003",
+    "metric_name": "target engagement",
+    "metric_value": 30.214,
+    "unit": "%",
+    "p_value": 0.034,
+    "confidence_interval": "[24.775, 35.653]",
+    "evidence_strength": "moderate",
+    "conclusion": "target engagement of 30.214 % (statistically significant, p=0.034). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0003",
+    "metric_name": "biomarker expression change",
+    "metric_value": -2.326,
+    "unit": "log2FC",
+    "p_value": 0.011,
+    "confidence_interval": "[-1.907, -2.745]",
+    "evidence_strength": "moderate",
+    "conclusion": "biomarker expression change of -2.326 log2FC (statistically significant, p=0.011). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0003",
+    "metric_name": "IC50",
+    "metric_value": 408.342,
+    "unit": "nM",
+    "p_value": 0.21,
+    "confidence_interval": "[334.84, 481.844]",
+    "evidence_strength": "weak",
+    "conclusion": "IC50 of 408.342 nM (not statistically significant, p=0.21). Evidence graded weak."
+  },
+  {
+    "experiment_code": "EXP-0004",
+    "metric_name": "cell viability",
+    "metric_value": 74.644,
+    "unit": "%",
+    "p_value": 0.002,
+    "confidence_interval": "[61.208, 88.08]",
+    "evidence_strength": "strong",
+    "conclusion": "cell viability of 74.644 % (statistically significant, p=0.002). Evidence graded strong."
+  },
+  {
+    "experiment_code": "EXP-0004",
+    "metric_name": "binding affinity Kd",
+    "metric_value": 254.84,
+    "unit": "nM",
+    "p_value": 0.21,
+    "confidence_interval": "[208.969, 300.711]",
+    "evidence_strength": "weak",
+    "conclusion": "binding affinity Kd of 254.84 nM (not statistically significant, p=0.21). Evidence graded weak."
+  },
+  {
+    "experiment_code": "EXP-0005",
+    "metric_name": "tumour volume reduction",
+    "metric_value": 6.606,
+    "unit": "%",
+    "p_value": 0.048,
+    "confidence_interval": "[5.417, 7.795]",
+    "evidence_strength": "moderate",
+    "conclusion": "tumour volume reduction of 6.606 % (statistically significant, p=0.048). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0005",
+    "metric_name": "biomarker expression change",
+    "metric_value": 0.272,
+    "unit": "log2FC",
+    "p_value": 0.048,
+    "confidence_interval": "[0.223, 0.321]",
+    "evidence_strength": "moderate",
+    "conclusion": "biomarker expression change of 0.272 log2FC (statistically significant, p=0.048). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0005",
+    "metric_name": "IC50",
+    "metric_value": 588.799,
+    "unit": "nM",
+    "p_value": 0.011,
+    "confidence_interval": "[482.815, 694.783]",
+    "evidence_strength": "moderate",
+    "conclusion": "IC50 of 588.799 nM (statistically significant, p=0.011). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0005",
+    "metric_name": "cell viability",
+    "metric_value": 42.248,
+    "unit": "%",
+    "p_value": 0.21,
+    "confidence_interval": "[34.643, 49.853]",
+    "evidence_strength": "weak",
+    "conclusion": "cell viability of 42.248 % (not statistically significant, p=0.21). Evidence graded weak."
+  },
+  {
+    "experiment_code": "EXP-0006",
+    "metric_name": "progression-free survival",
+    "metric_value": 20.22,
+    "unit": "months",
+    "p_value": 0.0001,
+    "confidence_interval": "[16.58, 23.86]",
+    "evidence_strength": "strong",
+    "conclusion": "progression-free survival of 20.22 months (statistically significant, p=0.0001). Evidence graded strong."
+  },
+  {
+    "experiment_code": "EXP-0006",
+    "metric_name": "cell viability",
+    "metric_value": 74.434,
+    "unit": "%",
+    "p_value": 0.67,
+    "confidence_interval": "[61.036, 87.832]",
+    "evidence_strength": "inconclusive",
+    "conclusion": "cell viability of 74.434 % (not statistically significant, p=0.67). Evidence graded inconclusive."
+  },
+  {
+    "experiment_code": "EXP-0007",
+    "metric_name": "target engagement",
+    "metric_value": 82.177,
+    "unit": "%",
+    "p_value": 0.0001,
+    "confidence_interval": "[67.385, 96.969]",
+    "evidence_strength": "strong",
+    "conclusion": "target engagement of 82.177 % (statistically significant, p=0.0001). Evidence graded strong."
+  },
+  {
+    "experiment_code": "EXP-0007",
+    "metric_name": "binding affinity Kd",
+    "metric_value": 48.618,
+    "unit": "nM",
+    "p_value": 0.011,
+    "confidence_interval": "[39.867, 57.369]",
+    "evidence_strength": "moderate",
+    "conclusion": "binding affinity Kd of 48.618 nM (statistically significant, p=0.011). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0007",
+    "metric_name": "IC50",
+    "metric_value": 673.214,
+    "unit": "nM",
+    "p_value": 0.011,
+    "confidence_interval": "[552.035, 794.393]",
+    "evidence_strength": "moderate",
+    "conclusion": "IC50 of 673.214 nM (statistically significant, p=0.011). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0007",
+    "metric_name": "biomarker expression change",
+    "metric_value": -1.653,
+    "unit": "log2FC",
+    "p_value": 0.048,
+    "confidence_interval": "[-1.355, -1.951]",
+    "evidence_strength": "moderate",
+    "conclusion": "biomarker expression change of -1.653 log2FC (statistically significant, p=0.048). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0008",
+    "metric_name": "target engagement",
+    "metric_value": 54.127,
+    "unit": "%",
+    "p_value": 0.21,
+    "confidence_interval": "[44.384, 63.87]",
+    "evidence_strength": "weak",
+    "conclusion": "target engagement of 54.127 % (not statistically significant, p=0.21). Evidence graded weak."
+  },
+  {
+    "experiment_code": "EXP-0008",
+    "metric_name": "IC50",
+    "metric_value": 700.262,
+    "unit": "nM",
+    "p_value": 0.011,
+    "confidence_interval": "[574.215, 826.309]",
+    "evidence_strength": "moderate",
+    "conclusion": "IC50 of 700.262 nM (statistically significant, p=0.011). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0009",
+    "metric_name": "target engagement",
+    "metric_value": 92.726,
+    "unit": "%",
+    "p_value": 0.034,
+    "confidence_interval": "[76.035, 109.417]",
+    "evidence_strength": "moderate",
+    "conclusion": "target engagement of 92.726 % (statistically significant, p=0.034). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0009",
+    "metric_name": "progression-free survival",
+    "metric_value": 16.057,
+    "unit": "months",
+    "p_value": 0.011,
+    "confidence_interval": "[13.167, 18.947]",
+    "evidence_strength": "moderate",
+    "conclusion": "progression-free survival of 16.057 months (statistically significant, p=0.011). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0010",
+    "metric_name": "binding affinity Kd",
+    "metric_value": 448.293,
+    "unit": "nM",
+    "p_value": 0.011,
+    "confidence_interval": "[367.6, 528.986]",
+    "evidence_strength": "moderate",
+    "conclusion": "binding affinity Kd of 448.293 nM (statistically significant, p=0.011). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0010",
+    "metric_name": "cell viability",
+    "metric_value": 57.353,
+    "unit": "%",
+    "p_value": 0.011,
+    "confidence_interval": "[47.029, 67.677]",
+    "evidence_strength": "moderate",
+    "conclusion": "cell viability of 57.353 % (statistically significant, p=0.011). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0010",
+    "metric_name": "IC50",
+    "metric_value": 363.2,
+    "unit": "nM",
+    "p_value": 0.21,
+    "confidence_interval": "[297.824, 428.576]",
+    "evidence_strength": "weak",
+    "conclusion": "IC50 of 363.2 nM (not statistically significant, p=0.21). Evidence graded weak."
+  },
+  {
+    "experiment_code": "EXP-0011",
+    "metric_name": "biomarker expression change",
+    "metric_value": -2.064,
+    "unit": "log2FC",
+    "p_value": 0.0001,
+    "confidence_interval": "[-1.692, -2.436]",
+    "evidence_strength": "strong",
+    "conclusion": "biomarker expression change of -2.064 log2FC (statistically significant, p=0.0001). Evidence graded strong."
+  },
+  {
+    "experiment_code": "EXP-0011",
+    "metric_name": "binding affinity Kd",
+    "metric_value": 364.66,
+    "unit": "nM",
+    "p_value": 0.034,
+    "confidence_interval": "[299.021, 430.299]",
+    "evidence_strength": "moderate",
+    "conclusion": "binding affinity Kd of 364.66 nM (statistically significant, p=0.034). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0011",
+    "metric_name": "target engagement",
+    "metric_value": 67.439,
+    "unit": "%",
+    "p_value": 0.034,
+    "confidence_interval": "[55.3, 79.578]",
+    "evidence_strength": "moderate",
+    "conclusion": "target engagement of 67.439 % (statistically significant, p=0.034). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0011",
+    "metric_name": "cell viability",
+    "metric_value": 62.577,
+    "unit": "%",
+    "p_value": 0.034,
+    "confidence_interval": "[51.313, 73.841]",
+    "evidence_strength": "moderate",
+    "conclusion": "cell viability of 62.577 % (statistically significant, p=0.034). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0012",
+    "metric_name": "binding affinity Kd",
+    "metric_value": 2.55,
+    "unit": "nM",
+    "p_value": 0.011,
+    "confidence_interval": "[2.091, 3.009]",
+    "evidence_strength": "moderate",
+    "conclusion": "binding affinity Kd of 2.55 nM (statistically significant, p=0.011). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0012",
+    "metric_name": "tumour volume reduction",
+    "metric_value": 15.7,
+    "unit": "%",
+    "p_value": 0.034,
+    "confidence_interval": "[12.874, 18.526]",
+    "evidence_strength": "moderate",
+    "conclusion": "tumour volume reduction of 15.7 % (statistically significant, p=0.034). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0013",
+    "metric_name": "binding affinity Kd",
+    "metric_value": 348.517,
+    "unit": "nM",
+    "p_value": 0.67,
+    "confidence_interval": "[285.784, 411.25]",
+    "evidence_strength": "inconclusive",
+    "conclusion": "binding affinity Kd of 348.517 nM (not statistically significant, p=0.67). Evidence graded inconclusive."
+  },
+  {
+    "experiment_code": "EXP-0013",
+    "metric_name": "IC50",
+    "metric_value": 359.555,
+    "unit": "nM",
+    "p_value": 0.67,
+    "confidence_interval": "[294.835, 424.275]",
+    "evidence_strength": "inconclusive",
+    "conclusion": "IC50 of 359.555 nM (not statistically significant, p=0.67). Evidence graded inconclusive."
+  },
+  {
+    "experiment_code": "EXP-0013",
+    "metric_name": "tumour volume reduction",
+    "metric_value": 17.373,
+    "unit": "%",
+    "p_value": 0.034,
+    "confidence_interval": "[14.246, 20.5]",
+    "evidence_strength": "moderate",
+    "conclusion": "tumour volume reduction of 17.373 % (statistically significant, p=0.034). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0013",
+    "metric_name": "biomarker expression change",
+    "metric_value": 0.692,
+    "unit": "log2FC",
+    "p_value": 0.002,
+    "confidence_interval": "[0.567, 0.817]",
+    "evidence_strength": "strong",
+    "conclusion": "biomarker expression change of 0.692 log2FC (statistically significant, p=0.002). Evidence graded strong."
+  },
+  {
+    "experiment_code": "EXP-0014",
+    "metric_name": "cell viability",
+    "metric_value": 19.256,
+    "unit": "%",
+    "p_value": 0.034,
+    "confidence_interval": "[15.79, 22.722]",
+    "evidence_strength": "moderate",
+    "conclusion": "cell viability of 19.256 % (statistically significant, p=0.034). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0014",
+    "metric_name": "binding affinity Kd",
+    "metric_value": 189.907,
+    "unit": "nM",
+    "p_value": 0.0001,
+    "confidence_interval": "[155.724, 224.09]",
+    "evidence_strength": "strong",
+    "conclusion": "binding affinity Kd of 189.907 nM (statistically significant, p=0.0001). Evidence graded strong."
+  },
+  {
+    "experiment_code": "EXP-0014",
+    "metric_name": "IC50",
+    "metric_value": 485.671,
+    "unit": "nM",
+    "p_value": 0.67,
+    "confidence_interval": "[398.25, 573.092]",
+    "evidence_strength": "inconclusive",
+    "conclusion": "IC50 of 485.671 nM (not statistically significant, p=0.67). Evidence graded inconclusive."
+  },
+  {
+    "experiment_code": "EXP-0015",
+    "metric_name": "cell viability",
+    "metric_value": 94.002,
+    "unit": "%",
+    "p_value": 0.0001,
+    "confidence_interval": "[77.082, 110.922]",
+    "evidence_strength": "strong",
+    "conclusion": "cell viability of 94.002 % (statistically significant, p=0.0001). Evidence graded strong."
+  },
+  {
+    "experiment_code": "EXP-0015",
+    "metric_name": "binding affinity Kd",
+    "metric_value": 255.503,
+    "unit": "nM",
+    "p_value": 0.034,
+    "confidence_interval": "[209.512, 301.494]",
+    "evidence_strength": "moderate",
+    "conclusion": "binding affinity Kd of 255.503 nM (statistically significant, p=0.034). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0016",
+    "metric_name": "biomarker expression change",
+    "metric_value": 3.24,
+    "unit": "log2FC",
+    "p_value": 0.21,
+    "confidence_interval": "[2.657, 3.823]",
+    "evidence_strength": "weak",
+    "conclusion": "biomarker expression change of 3.24 log2FC (not statistically significant, p=0.21). Evidence graded weak."
+  },
+  {
+    "experiment_code": "EXP-0016",
+    "metric_name": "tumour volume reduction",
+    "metric_value": 39.397,
+    "unit": "%",
+    "p_value": 0.048,
+    "confidence_interval": "[32.306, 46.488]",
+    "evidence_strength": "moderate",
+    "conclusion": "tumour volume reduction of 39.397 % (statistically significant, p=0.048). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0016",
+    "metric_name": "progression-free survival",
+    "metric_value": 4.538,
+    "unit": "months",
+    "p_value": 0.011,
+    "confidence_interval": "[3.721, 5.355]",
+    "evidence_strength": "moderate",
+    "conclusion": "progression-free survival of 4.538 months (statistically significant, p=0.011). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0016",
+    "metric_name": "target engagement",
+    "metric_value": 89.48,
+    "unit": "%",
+    "p_value": 0.034,
+    "confidence_interval": "[73.374, 105.586]",
+    "evidence_strength": "moderate",
+    "conclusion": "target engagement of 89.48 % (statistically significant, p=0.034). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0017",
+    "metric_name": "cell viability",
+    "metric_value": 42.543,
+    "unit": "%",
+    "p_value": 0.002,
+    "confidence_interval": "[34.885, 50.201]",
+    "evidence_strength": "strong",
+    "conclusion": "cell viability of 42.543 % (statistically significant, p=0.002). Evidence graded strong."
+  },
+  {
+    "experiment_code": "EXP-0017",
+    "metric_name": "target engagement",
+    "metric_value": 46.82,
+    "unit": "%",
+    "p_value": 0.002,
+    "confidence_interval": "[38.392, 55.248]",
+    "evidence_strength": "strong",
+    "conclusion": "target engagement of 46.82 % (statistically significant, p=0.002). Evidence graded strong."
+  },
+  {
+    "experiment_code": "EXP-0018",
+    "metric_name": "IC50",
+    "metric_value": 305.51,
+    "unit": "nM",
+    "p_value": 0.0001,
+    "confidence_interval": "[250.518, 360.502]",
+    "evidence_strength": "strong",
+    "conclusion": "IC50 of 305.51 nM (statistically significant, p=0.0001). Evidence graded strong."
+  },
+  {
+    "experiment_code": "EXP-0018",
+    "metric_name": "progression-free survival",
+    "metric_value": 8.623,
+    "unit": "months",
+    "p_value": 0.011,
+    "confidence_interval": "[7.071, 10.175]",
+    "evidence_strength": "moderate",
+    "conclusion": "progression-free survival of 8.623 months (statistically significant, p=0.011). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0019",
+    "metric_name": "progression-free survival",
+    "metric_value": 8.912,
+    "unit": "months",
+    "p_value": 0.034,
+    "confidence_interval": "[7.308, 10.516]",
+    "evidence_strength": "moderate",
+    "conclusion": "progression-free survival of 8.912 months (statistically significant, p=0.034). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0019",
+    "metric_name": "cell viability",
+    "metric_value": 20.084,
+    "unit": "%",
+    "p_value": 0.011,
+    "confidence_interval": "[16.469, 23.699]",
+    "evidence_strength": "moderate",
+    "conclusion": "cell viability of 20.084 % (statistically significant, p=0.011). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0020",
+    "metric_name": "biomarker expression change",
+    "metric_value": 2.864,
+    "unit": "log2FC",
+    "p_value": 0.21,
+    "confidence_interval": "[2.348, 3.38]",
+    "evidence_strength": "weak",
+    "conclusion": "biomarker expression change of 2.864 log2FC (not statistically significant, p=0.21). Evidence graded weak."
+  },
+  {
+    "experiment_code": "EXP-0020",
+    "metric_name": "target engagement",
+    "metric_value": 72.812,
+    "unit": "%",
+    "p_value": 0.67,
+    "confidence_interval": "[59.706, 85.918]",
+    "evidence_strength": "inconclusive",
+    "conclusion": "target engagement of 72.812 % (not statistically significant, p=0.67). Evidence graded inconclusive."
+  },
+  {
+    "experiment_code": "EXP-0020",
+    "metric_name": "binding affinity Kd",
+    "metric_value": 133.629,
+    "unit": "nM",
+    "p_value": 0.048,
+    "confidence_interval": "[109.576, 157.682]",
+    "evidence_strength": "moderate",
+    "conclusion": "binding affinity Kd of 133.629 nM (statistically significant, p=0.048). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0020",
+    "metric_name": "progression-free survival",
+    "metric_value": 17.471,
+    "unit": "months",
+    "p_value": 0.048,
+    "confidence_interval": "[14.326, 20.616]",
+    "evidence_strength": "moderate",
+    "conclusion": "progression-free survival of 17.471 months (statistically significant, p=0.048). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0021",
+    "metric_name": "target engagement",
+    "metric_value": 34.006,
+    "unit": "%",
+    "p_value": 0.034,
+    "confidence_interval": "[27.885, 40.127]",
+    "evidence_strength": "moderate",
+    "conclusion": "target engagement of 34.006 % (statistically significant, p=0.034). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0021",
+    "metric_name": "IC50",
+    "metric_value": 840.683,
+    "unit": "nM",
+    "p_value": 0.0001,
+    "confidence_interval": "[689.36, 992.006]",
+    "evidence_strength": "strong",
+    "conclusion": "IC50 of 840.683 nM (statistically significant, p=0.0001). Evidence graded strong."
+  },
+  {
+    "experiment_code": "EXP-0022",
+    "metric_name": "target engagement",
+    "metric_value": 85.658,
+    "unit": "%",
+    "p_value": 0.034,
+    "confidence_interval": "[70.24, 101.076]",
+    "evidence_strength": "moderate",
+    "conclusion": "target engagement of 85.658 % (statistically significant, p=0.034). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0022",
+    "metric_name": "binding affinity Kd",
+    "metric_value": 184.81,
+    "unit": "nM",
+    "p_value": 0.002,
+    "confidence_interval": "[151.544, 218.076]",
+    "evidence_strength": "strong",
+    "conclusion": "binding affinity Kd of 184.81 nM (statistically significant, p=0.002). Evidence graded strong."
+  },
+  {
+    "experiment_code": "EXP-0022",
+    "metric_name": "cell viability",
+    "metric_value": 16.181,
+    "unit": "%",
+    "p_value": 0.0001,
+    "confidence_interval": "[13.268, 19.094]",
+    "evidence_strength": "strong",
+    "conclusion": "cell viability of 16.181 % (statistically significant, p=0.0001). Evidence graded strong."
+  },
+  {
+    "experiment_code": "EXP-0022",
+    "metric_name": "IC50",
+    "metric_value": 125.493,
+    "unit": "nM",
+    "p_value": 0.67,
+    "confidence_interval": "[102.904, 148.082]",
+    "evidence_strength": "inconclusive",
+    "conclusion": "IC50 of 125.493 nM (not statistically significant, p=0.67). Evidence graded inconclusive."
+  },
+  {
+    "experiment_code": "EXP-0023",
+    "metric_name": "cell viability",
+    "metric_value": 61.693,
+    "unit": "%",
+    "p_value": 0.67,
+    "confidence_interval": "[50.588, 72.798]",
+    "evidence_strength": "inconclusive",
+    "conclusion": "cell viability of 61.693 % (not statistically significant, p=0.67). Evidence graded inconclusive."
+  },
+  {
+    "experiment_code": "EXP-0023",
+    "metric_name": "IC50",
+    "metric_value": 510.277,
+    "unit": "nM",
+    "p_value": 0.034,
+    "confidence_interval": "[418.427, 602.127]",
+    "evidence_strength": "moderate",
+    "conclusion": "IC50 of 510.277 nM (statistically significant, p=0.034). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0023",
+    "metric_name": "tumour volume reduction",
+    "metric_value": 45.692,
+    "unit": "%",
+    "p_value": 0.21,
+    "confidence_interval": "[37.467, 53.917]",
+    "evidence_strength": "weak",
+    "conclusion": "tumour volume reduction of 45.692 % (not statistically significant, p=0.21). Evidence graded weak."
+  },
+  {
+    "experiment_code": "EXP-0024",
+    "metric_name": "binding affinity Kd",
+    "metric_value": 237.535,
+    "unit": "nM",
+    "p_value": 0.21,
+    "confidence_interval": "[194.779, 280.291]",
+    "evidence_strength": "weak",
+    "conclusion": "binding affinity Kd of 237.535 nM (not statistically significant, p=0.21). Evidence graded weak."
+  },
+  {
+    "experiment_code": "EXP-0024",
+    "metric_name": "tumour volume reduction",
+    "metric_value": 7.421,
+    "unit": "%",
+    "p_value": 0.21,
+    "confidence_interval": "[6.085, 8.757]",
+    "evidence_strength": "weak",
+    "conclusion": "tumour volume reduction of 7.421 % (not statistically significant, p=0.21). Evidence graded weak."
+  },
+  {
+    "experiment_code": "EXP-0024",
+    "metric_name": "target engagement",
+    "metric_value": 24.503,
+    "unit": "%",
+    "p_value": 0.002,
+    "confidence_interval": "[20.092, 28.914]",
+    "evidence_strength": "strong",
+    "conclusion": "target engagement of 24.503 % (statistically significant, p=0.002). Evidence graded strong."
+  },
+  {
+    "experiment_code": "EXP-0025",
+    "metric_name": "tumour volume reduction",
+    "metric_value": 71.564,
+    "unit": "%",
+    "p_value": 0.21,
+    "confidence_interval": "[58.682, 84.446]",
+    "evidence_strength": "weak",
+    "conclusion": "tumour volume reduction of 71.564 % (not statistically significant, p=0.21). Evidence graded weak."
+  },
+  {
+    "experiment_code": "EXP-0025",
+    "metric_name": "target engagement",
+    "metric_value": 69.228,
+    "unit": "%",
+    "p_value": 0.67,
+    "confidence_interval": "[56.767, 81.689]",
+    "evidence_strength": "inconclusive",
+    "conclusion": "target engagement of 69.228 % (not statistically significant, p=0.67). Evidence graded inconclusive."
+  },
+  {
+    "experiment_code": "EXP-0025",
+    "metric_name": "biomarker expression change",
+    "metric_value": -1.007,
+    "unit": "log2FC",
+    "p_value": 0.0001,
+    "confidence_interval": "[-0.826, -1.188]",
+    "evidence_strength": "strong",
+    "conclusion": "biomarker expression change of -1.007 log2FC (statistically significant, p=0.0001). Evidence graded strong."
+  },
+  {
+    "experiment_code": "EXP-0025",
+    "metric_name": "progression-free survival",
+    "metric_value": 19.006,
+    "unit": "months",
+    "p_value": 0.21,
+    "confidence_interval": "[15.585, 22.427]",
+    "evidence_strength": "weak",
+    "conclusion": "progression-free survival of 19.006 months (not statistically significant, p=0.21). Evidence graded weak."
+  },
+  {
+    "experiment_code": "EXP-0026",
+    "metric_name": "tumour volume reduction",
+    "metric_value": 8.908,
+    "unit": "%",
+    "p_value": 0.011,
+    "confidence_interval": "[7.305, 10.511]",
+    "evidence_strength": "moderate",
+    "conclusion": "tumour volume reduction of 8.908 % (statistically significant, p=0.011). Evidence graded moderate."
+  },
+  {
+    "experiment_code": "EXP-0026",
+    "metric_name": "binding affinity Kd",
+    "metric_value": 228.604,
+    "unit": "nM",
+    "p_value": 0.67,
+    "confidence_interval": "[187.455, 269.753]",
+    "evidence_strength": "inconclusive",
+    "conclusion": "binding affinity Kd of 228.604 nM (not statistically significant, p=0.67). Evidence graded inconclusive."
+  },
+  {
+    "experiment_code": "EXP-0026",
+    "metric_name": "IC50",
+    "metric_value": 518.625,
+    "unit": "nM",
+    "p_value": 0.034,
+    "confidence_interval": "[425.272, 611.977]",
+    "evidence_strength": "moderate",
+    "conclusion": "IC50 of 518.625 nM (statistically significant, p=0.034). Evidence graded moderate."
+  }
+]
