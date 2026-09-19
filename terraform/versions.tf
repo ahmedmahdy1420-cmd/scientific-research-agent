@@ -16,7 +16,7 @@ terraform {
   # Configure it at init time, e.g.
   #   terraform init \
   #     -backend-config="bucket=my-tf-state" \
-  #     -backend-config="key=scientific-research-agent/terraform.tfstate" \
+  #     -backend-config="key=fahem/terraform.tfstate" \
   #     -backend-config="region=eu-west-1" \
   #     -backend-config="use_lockfile=true"
   backend "s3" {}

@@ -68,7 +68,7 @@ MCP_SERVICE_PRINCIPAL = Principal(
 )
 
 server = MCPServer(
-    name="scientific-research-agent",
+    name="fahem",
     version="0.1.0",
     instructions=(
         "Scientific research data for an internal corpus. Tools cover document "

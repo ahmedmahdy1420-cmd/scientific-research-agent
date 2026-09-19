@@ -31,7 +31,7 @@ class Settings(BaseSettings):
     )
 
     # --- Application ---------------------------------------------------------
-    app_name: str = "scientific-research-agent"
+    app_name: str = "fahem"
     environment: Environment = "local"
     debug: bool = False
     log_level: str = "INFO"
@@ -99,7 +99,7 @@ class Settings(BaseSettings):
     # --- Storage -------------------------------------------------------------
     storage_backend: StorageBackend = "local"
     local_storage_path: str = "./storage"
-    s3_bucket: str = "scientific-research-agent-documents"
+    s3_bucket: str = "fahem-documents"
     s3_endpoint_url: str = ""
     aws_region: str = "eu-west-1"
 
@@ -136,7 +136,7 @@ class Settings(BaseSettings):
     # --- Observability -------------------------------------------------------
     langsmith_tracing: bool = False
     langsmith_api_key: str = ""
-    langsmith_project: str = "scientific-research-agent"
+    langsmith_project: str = "fahem"
     otel_enabled: bool = False
     otel_exporter_otlp_endpoint: str = ""
 

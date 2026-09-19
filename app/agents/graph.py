@@ -190,7 +190,7 @@ def build_agent_graph(deps: AgentDependencies, checkpointer: Any = None) -> Any:
 
     return builder.compile(
         checkpointer=checkpointer,
-        name="scientific-research-agent",
+        name="fahem",
     )
 
 

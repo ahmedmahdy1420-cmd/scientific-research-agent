@@ -233,7 +233,7 @@ jobs:
           context: .
           push: false
           load: true
-          tags: scientific-research-agent:${{ github.sha }}
+          tags: fahem:${{ github.sha }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -241,7 +241,7 @@ jobs:
         # Proves the image can import the app and start a worker command, which
         # a build alone does not.
         run: |
-          docker run --rm scientific-research-agent:${{ github.sha }} \
+          docker run --rm fahem:${{ github.sha }} \
             python -c "import app.main; import app.workers.tasks; import app.mcp.server; print('imports OK')"
 
   # ---------------------------------------------------------------------------

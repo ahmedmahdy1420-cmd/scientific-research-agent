@@ -75,7 +75,7 @@ export default function Login({ onLoggedIn }: { onLoggedIn: () => void }) {
             <IconFlask size={19} />
           </div>
           <div>
-            <h1 style={{ fontSize: 14.5 }}>Research Agent</h1>
+            <h1 style={{ fontSize: 14.5 }}>Fahem</h1>
             <div className="tagline">FastAPI · LangGraph · pgvector · MCP</div>
           </div>
         </div>
