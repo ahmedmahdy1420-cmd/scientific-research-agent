@@ -1,7 +1,29 @@
 import { useCallback, useEffect, useState } from "react";
 import { api, RequestError } from "../lib/api";
-import { Badge, ErrorBanner, Spinner, formatCost, formatMs } from "../components/Common";
+import {
+  Badge,
+  Card,
+  EmptyState,
+  ErrorBanner,
+  NoticeBanner,
+  PageHead,
+  SkeletonRows,
+  Stat,
+  formatCost,
+  formatMs,
+} from "../components/Common";
+import {
+  IconBolt,
+  IconCheck,
+  IconGauge,
+  IconShield,
+  IconX,
+} from "../components/Icons";
 import type { EvaluationCase, EvaluationResult, SuiteSummary } from "../lib/types";
+
+function rateKind(rate: number): string {
+  return rate >= 0.8 ? "ok" : rate >= 0.5 ? "warn" : "bad";
+}
 
 export default function Evaluation() {
   const [summary, setSummary] = useState<SuiteSummary[] | null>(null);
@@ -51,102 +73,164 @@ export default function Evaluation() {
   }
 
   const bySlug = new Map(cases.map((c) => [c.id, c]));
+  const latest = summary?.[0];
 
   return (
     <>
-      <h2>Evaluation</h2>
-      <p className="subtitle">
-        Deterministic checks decide pass/fail; the LLM judge is advisory and recorded
-        alongside so a human can disagree with it.
-      </p>
+      <PageHead
+        title="Evaluation"
+        subtitle="Deterministic checks decide pass/fail; the LLM judge is advisory and recorded alongside so a human can disagree with it. CI gates on the deterministic score alone."
+        actions={
+          <div className="row">
+            <button className="secondary" onClick={() => void load()}>
+              Refresh
+            </button>
+            <button onClick={run} disabled={running}>
+              {running ? <span className="spinner on-accent" /> : <IconBolt size={15} />}
+              {running ? "Dispatching…" : "Run the core suite"}
+            </button>
+          </div>
+        }
+      />
 
       <ErrorBanner message={error} />
-      {message && <div className="notice">{message}</div>}
+      {message && <NoticeBanner message={message} />}
 
-      <div className="card">
-        <div className="row">
-          <button onClick={run} disabled={running}>
-            {running ? "Dispatching…" : "Run the core suite"}
-          </button>
-          <button className="secondary" onClick={() => void load()}>Refresh</button>
-          <span className="muted">{cases.length} cases defined</span>
-        </div>
+      <div className="stats summary fade-up" style={{ marginBottom: 16 }}>
+        <Stat accent label="Cases defined" value={cases.length} />
+        <Stat
+          label="Latest pass rate"
+          value={latest ? `${(latest.pass_rate * 100).toFixed(0)}%` : "—"}
+        />
+        <Stat
+          label="Latest mean score"
+          value={latest ? latest.mean_score.toFixed(3) : "—"}
+        />
+        <Stat
+          accent
+          label="Latest cost"
+          value={latest ? formatCost(latest.total_cost_usd) : "—"}
+        />
       </div>
 
-      {!summary && !error && <Spinner label="Loading evaluation history…" />}
+      {!summary && !error && (
+        <Card title="Loading" icon={<IconGauge size={14} />}>
+          <SkeletonRows rows={4} />
+        </Card>
+      )}
+
+      {summary && summary.length === 0 && (
+        <Card>
+          <EmptyState
+            icon={<IconGauge size={20} />}
+            title="No suite has been run yet"
+            hint="Dispatch the core suite above, or run `make eval` against the stack."
+          />
+        </Card>
+      )}
 
       {summary && summary.length > 0 && (
-        <div className="card">
-          <h3 style={{ marginTop: 0 }}>Suite runs</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Run</th><th>Passed</th><th>Pass rate</th>
-                <th>Mean score</th><th>Mean latency</th><th>Cost</th>
-              </tr>
-            </thead>
-            <tbody>
-              {summary.map((row) => (
-                <tr key={row.run_label}>
-                  <td className="mono">{row.run_label}</td>
-                  <td>{row.passed}/{row.total}</td>
-                  <td>
-                    <Badge kind={row.pass_rate >= 0.8 ? "ok" : row.pass_rate >= 0.5 ? "warn" : "bad"}>
-                      {(row.pass_rate * 100).toFixed(0)}%
-                    </Badge>
-                  </td>
-                  <td>{row.mean_score.toFixed(3)}</td>
-                  <td>{formatMs(Math.round(row.mean_latency_ms))}</td>
-                  <td>{formatCost(row.total_cost_usd)}</td>
+        <Card flush title="Suite runs" icon={<IconGauge size={14} />}>
+          <div className="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Run</th>
+                  <th>Passed</th>
+                  <th>Pass rate</th>
+                  <th>Mean score</th>
+                  <th>Mean latency</th>
+                  <th>Cost</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+              </thead>
+              <tbody>
+                {summary.map((row) => (
+                  <tr key={row.run_label}>
+                    <td className="mono">{row.run_label}</td>
+                    <td className="num">
+                      {row.passed}/{row.total}
+                    </td>
+                    <td style={{ minWidth: 150 }}>
+                      <div className="row" style={{ gap: 9, flexWrap: "nowrap" }}>
+                        <Badge kind={rateKind(row.pass_rate)}>
+                          {(row.pass_rate * 100).toFixed(0)}%
+                        </Badge>
+                        <div className="meter grow" style={{ minWidth: 48 }}>
+                          <span style={{ width: `${row.pass_rate * 100}%` }} />
+                        </div>
+                      </div>
+                    </td>
+                    <td className="num">{row.mean_score.toFixed(3)}</td>
+                    <td className="num">{formatMs(Math.round(row.mean_latency_ms))}</td>
+                    <td className="num">{formatCost(row.total_cost_usd)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </Card>
       )}
 
       {results.length > 0 && (
-        <div className="card">
-          <h3 style={{ marginTop: 0 }}>Latest results</h3>
+        <Card
+          title="Latest results"
+          icon={<IconShield size={14} />}
+          actions={<span className="faint tiny">showing {Math.min(results.length, 25)}</span>}
+        >
           {results.slice(0, 25).map((result) => (
-            <div
+            <article
               key={result.id}
+              className="evidence"
               style={{
-                borderLeft: `2px solid ${result.passed ? "var(--ok)" : "var(--bad)"}`,
-                padding: "4px 0 10px 12px",
-                marginBottom: 10,
+                borderLeftColor: result.passed ? "var(--ok)" : "var(--bad)",
               }}
             >
-              <div className="row">
+              <div className="row" style={{ gap: 8 }}>
                 <Badge kind={result.passed ? "ok" : "bad"}>
+                  {result.passed ? <IconCheck size={10} /> : <IconX size={10} />}
                   {result.passed ? "pass" : "fail"}
                 </Badge>
-                <span className="mono">{bySlug.get(result.case_id)?.slug ?? result.case_id}</span>
-                <span className="muted">score {result.overall_score.toFixed(3)}</span>
-                <span className="muted">{formatMs(result.latency_ms)}</span>
-                <span className="muted">{formatCost(result.cost_usd)}</span>
+                <span className="mono tiny">
+                  {bySlug.get(result.case_id)?.slug ?? result.case_id}
+                </span>
+                <span className="faint tiny">score {result.overall_score.toFixed(3)}</span>
+                <span className="faint tiny">{formatMs(result.latency_ms)}</span>
+                <span className="faint tiny">{formatCost(result.cost_usd)}</span>
                 {result.human_verdict && (
                   <Badge kind="warn">human: {result.human_verdict}</Badge>
                 )}
               </div>
+
               {result.tools_used.length > 0 && (
-                <div className="muted mono">tools: {result.tools_used.join(", ")}</div>
+                <div className="row" style={{ gap: 5, marginTop: 7 }}>
+                  {result.tools_used.map((tool) => (
+                    <span key={tool} className="badge plain mono">
+                      {tool}
+                    </span>
+                  ))}
+                </div>
               )}
+
               {result.failures.length > 0 && (
-                <ul style={{ color: "var(--bad)", margin: "6px 0" }}>
-                  {result.failures.map((failure, i) => <li key={i}>{failure}</li>)}
+                <ul style={{ color: "var(--bad)", margin: "8px 0 0", paddingLeft: 18 }}>
+                  {result.failures.map((failure, i) => (
+                    <li key={i}>{failure}</li>
+                  ))}
                 </ul>
               )}
+
               {Object.keys(result.judge_scores).length > 0 && (
-                <details>
-                  <summary className="muted">judge scores and reasoning</summary>
+                <details style={{ marginTop: 4 }}>
+                  <summary>judge scores and reasoning (advisory)</summary>
                   <pre>{JSON.stringify(result.judge_scores, null, 2)}</pre>
-                  <p className="muted">{result.judge_reasoning}</p>
+                  <p className="muted tiny" style={{ marginTop: 6 }}>
+                    {result.judge_reasoning}
+                  </p>
                 </details>
               )}
-            </div>
+            </article>
           ))}
-        </div>
+        </Card>
       )}
     </>
   );
