@@ -1,8 +1,9 @@
 import { useCallback, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { api, RequestError } from "../lib/api";
-import { ErrorBanner, Spinner } from "../components/Common";
+import { Card, ErrorBanner, PageHead, SkeletonRows } from "../components/Common";
 import { RunDetail } from "../components/RunDetail";
+import { IconArrowLeft } from "../components/Icons";
 import type { AgentRun } from "../lib/types";
 
 export default function RunDetailPage() {
@@ -38,12 +39,25 @@ export default function RunDetailPage() {
 
   return (
     <>
-      <h2>Agent Run</h2>
-      <p className="subtitle">
-        <Link to="/runs">&larr; All runs</Link>
-      </p>
+      <PageHead
+        title="Agent Run"
+        subtitle={run?.question ?? "Loading the recorded trace for this run."}
+        actions={
+          <Link to="/runs" className="btn secondary">
+            <IconArrowLeft size={14} />
+            All runs
+          </Link>
+        }
+      />
+
       <ErrorBanner message={error} />
-      {!run && !error && <Spinner label="Loading run…" />}
+
+      {!run && !error && (
+        <Card>
+          <SkeletonRows rows={6} height={40} />
+        </Card>
+      )}
+
       {run && <RunDetail run={run} onApprove={decide} approving={approving} />}
     </>
   );
