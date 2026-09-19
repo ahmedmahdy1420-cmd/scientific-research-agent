@@ -1,10 +1,10 @@
 """Text-to-SQL: demonstrated safely, deliberately NOT on the production path.
 
-Interview position on this, stated plainly: generated SQL is useful for
-exploratory analytics with a human reading the query before it runs. It is a
-poor fit for an autonomous agent answering questions for other people, because
-the failure mode is silent — a subtly wrong JOIN returns a confident, wrong
-number with no error.
+The position, stated plainly: generated SQL is useful for exploratory
+analytics with a human reading the query before it runs. It is a poor fit for
+an autonomous agent answering questions for other people, because the failure
+mode is silent — a subtly wrong JOIN returns a confident, wrong number with no
+error.
 
 So the production path uses the named tools in `sql_tools.py`. This module
 exists to show how you would do it if you had to, with every control in place:
