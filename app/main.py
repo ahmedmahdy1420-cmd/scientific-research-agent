@@ -116,14 +116,14 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
 
 def create_app() -> FastAPI:
     app = FastAPI(
-        title="Scientific Research Agent",
+        title="Fahem",
         description=DESCRIPTION,
         version=APP_VERSION,
         lifespan=lifespan,
         docs_url="/docs",
         redoc_url="/redoc",
         openapi_url="/openapi.json",
-        contact={"name": "Scientific Research Agent"},
+        contact={"name": "Fahem"},
         license_info={"name": "MIT"},
         openapi_tags=[
             {"name": "ops", "description": "Liveness and readiness probes."},

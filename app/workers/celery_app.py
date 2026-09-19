@@ -27,7 +27,7 @@ settings = get_settings()
 log = get_logger(__name__)
 
 celery_app = Celery(
-    "scientific_research_agent",
+    "fahem",
     broker=settings.celery_broker_url,
     backend=settings.celery_result_backend,
     include=["app.workers.tasks"],

@@ -1,7 +1,7 @@
 variable "project_name" {
   description = "Name prefix for every resource."
   type        = string
-  default     = "scientific-research-agent"
+  default     = "fahem"
 }
 
 variable "environment" {

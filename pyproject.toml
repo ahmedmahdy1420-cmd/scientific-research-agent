@@ -1,5 +1,5 @@
 [project]
-name = "scientific-research-agent"
+name = "fahem"
 version = "0.1.0"
 description = "Production-style agentic AI research assistant: FastAPI + LangGraph + RAG (pgvector) + MCP."
 requires-python = ">=3.12"

@@ -7,7 +7,7 @@
 #   postgres           localhost:5432
 #   redis              localhost:6379
 
-name: scientific-research-agent
+name: fahem
 
 x-app-env: &app-env
   env_file: [.env]

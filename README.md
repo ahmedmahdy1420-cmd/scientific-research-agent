@@ -1,7 +1,11 @@
-# scientific-research-agent
+# Fahem
 
 A production-oriented **agentic AI research assistant** for scientific
 literature and internal research data.
+
+*Fahem (فاهم) is Arabic for "understands". The name is the claim the system
+has to earn: it does not assert an answer, it shows the evidence the answer
+came from — and refuses the ones it cannot support.*
 
 Ask it *"find recent research about breast cancer biomarkers and summarise the
 strongest evidence"* and it classifies the question, plans typed tool calls,
@@ -14,7 +18,7 @@ Ask it to *delete a document* and it stops and waits for a different human to
 approve.
 
 ```bash
-git clone <repo> && cd scientific-research-agent
+git clone <repo> && cd fahem
 cp .env.example .env
 docker compose up --build
 ```

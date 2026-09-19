@@ -104,7 +104,7 @@ function Sidebar({ user, onSignOut }: { user: CurrentUser; onSignOut: () => void
           <IconFlask size={19} />
         </div>
         <div>
-          <h1>Research Agent</h1>
+          <h1>Fahem</h1>
           <div className="tagline">LangGraph · pgvector · MCP</div>
         </div>
       </div>
@@ -165,7 +165,7 @@ function Topbar() {
   return (
     <header className="topbar">
       <span className="crumb">
-        Research Agent <span style={{ opacity: 0.4 }}>/</span>{" "}
+        Fahem <span style={{ opacity: 0.4 }}>/</span>{" "}
         <span style={{ color: "var(--text)" }}>{current}</span>
       </span>
       <div className="grow" />
