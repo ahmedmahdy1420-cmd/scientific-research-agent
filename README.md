@@ -61,7 +61,6 @@ same code calls GPT.
 - [Production considerations](#production-considerations)
 - [Limitations](#limitations)
 - [Future improvements](#future-improvements)
-- [How to explain this project in an interview](#how-to-explain-this-project-in-a-senior-ai-engineer-interview)
 
 ---
 
@@ -336,7 +335,7 @@ question → preprocess → embed (cached) → pgvector HNSW cosine search
         → LLM → answer + citations → deterministic citation check
 ```
 
-Three decisions an interviewer is likely to probe:
+Three decisions worth spelling out:
 
 **Why 1536 dimensions when `text-embedding-3-large` is 3072?** pgvector's HNSW
 index on the `vector` type is limited to 2000 dimensions. Without an index, a
@@ -922,63 +921,6 @@ Roughly in the order I would actually do them:
 
 ---
 
-## How to explain this project in a Senior AI Engineer interview
-
-The one-paragraph version:
-
-> I built a production-oriented scientific research assistant using **FastAPI**
-> and **Pydantic v2** for the API layer, **LangGraph** for agent orchestration,
-> the **OpenAI SDK** for model and tool calling, **PostgreSQL with pgvector**
-> for RAG and structured data, **Celery and Redis** for background ingestion,
-> **MCP** for standardised enterprise tools, and **Docker/AWS** for deployment.
-> I added evaluation, tracing, security, retries and bounded agent execution
-> because an LLM by itself isn't a production system.
-
-Then the component-by-component version:
-
-**The API layer.** FastAPI with Pydantic v2 schemas on every request and
-response. Dependency injection carries the authenticated `Principal` through
-the whole stack, so nothing downstream re-parses a token.
-
-**The agent.** A LangGraph state machine: classify (fast model), plan
-(reasoning model), select tools (authorisation), execute concurrently by tool
-group, analyse, verify, finalise. Explicit rather than a loop because I need
-checkpointing — the human-approval pause has to survive a deploy.
-
-**Tool calling.** Ten tools, each with a Pydantic input model. The model
-*proposes* a call; the backend decides whether it runs. That decision — the
-allowlist, the permission check, validation, the timeout, the audit row — is
-one function, and it is the thing I would point at if someone asked how the
-system is safe.
-
-**RAG.** pgvector with an HNSW cosine index. The access-level filter is in the
-SQL, from the authenticated user, so a restricted passage is never fetched and
-therefore can never reach a prompt. Citations are short stable ids, and the
-verifier checks them by set membership — a fabricated citation is caught
-deterministically, not by asking a model to be careful.
-
-**MCP.** The same service layer exposed as standard, discoverable tools for
-consumers outside this codebase, behind bearer auth and a deliberately
-restricted service principal.
-
-**Evaluation.** Ten cases, real agent runs, deterministic checks deciding
-pass/fail with an LLM judge as advisory colour. It gates CI, and it found a
-real caching bug during development.
-
-**Operations.** Structured logs with one wide event per run, CloudWatch metric
-filters that alarm on cost and grounding failures rather than only CPU, retries
-with per-status policies, Terraform for the whole stack, and a deploy that runs
-migrations first and rolls itself back on failure.
-
-The interview cheat sheet with ~35 likely questions and answers is in
-**[docs/interview.md](docs/interview.md)**. There is also a
-[10-minute live demo guide](docs/demo-10-minutes.md), a
-[5-minute technical explanation](docs/technical-explanation-5-minutes.md), and
-[likely follow-up questions](docs/follow-up-questions.md) specific to this
-architecture.
-
----
-
 ## Project layout
 
 ```
@@ -1003,7 +945,7 @@ alembic/          migrations
 mock_services/    the mock clinical-trials API (with failure injection)
 frontend/         React + TypeScript + Vite
 terraform/        AWS infrastructure
-docs/             architecture diagrams, interview material, demo guides
+docs/             architecture diagrams and design notes
 scripts/          sample data, PDFs, seeding, evaluation CLI, demo
 tests/            unit, integration, live
 ```
