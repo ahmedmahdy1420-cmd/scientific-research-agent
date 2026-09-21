@@ -38,8 +38,50 @@ same code calls GPT.
 
 ---
 
+## What it looks like
+
+![A run answering from the external clinical-trials API: four distinct sources, each citation resolving to a retrieved passage](docs/media/answer-with-citations.png)
+
+Every answer opens onto the run that produced it — the plan, each tool call,
+the evidence retrieved, the verification verdict and what it cost.
+
+**A destructive request stops and waits for a second human.** Nothing has been
+changed at this point; the graph state is checkpointed in Postgres, and the
+person who asked cannot be the person who approves.
+
+![The approval gate: an archive_document request paused at risk level high, with approve and reject actions](docs/media/human-approval-gate.png)
+
+**The corpus contains a document that tells the model to ignore its
+instructions and drop the database.** It is retrieved, quoted as evidence and
+summarised like any other source — and not obeyed, because the model was never
+the thing deciding what runs.
+
+![Evidence panel showing a retrieved document containing SYSTEM OVERRIDE instructions to ignore all previous instructions and DROP TABLE documents](docs/media/prompt-injection-ignored.png)
+
+<details>
+<summary><b>More</b> — cost and latency, run history, evaluation</summary>
+
+Tokens, spend and the latency split across the model, the tools and retrieval,
+recorded per run:
+
+![Per-run counters: total, LLM, tool and retrieval latency, tokens, cost, tool calls, iterations and cache hits](docs/media/cost-and-latency.png)
+
+Every run is persisted and replayable:
+
+![Run history listing questions with status, category, tool count, latency and cost](docs/media/agent-runs.png)
+
+Deterministic checks decide pass/fail; the LLM judge is advisory and recorded
+beside them:
+
+![Evaluation suites with pass rates and per-case results](docs/media/evaluation.png)
+
+</details>
+
+---
+
 ## Contents
 
+- [What it looks like](#what-it-looks-like)
 - [What it demonstrates](#what-it-demonstrates)
 - [Architecture](#architecture)
 - [Technology choices](#technology-choices-and-why)
@@ -949,7 +991,7 @@ alembic/          migrations
 mock_services/    the mock clinical-trials API (with failure injection)
 frontend/         React + TypeScript + Vite
 terraform/        AWS infrastructure
-docs/             architecture diagrams and design notes
+docs/             architecture diagrams, design notes and screenshots
 scripts/          sample data, PDFs, seeding, evaluation CLI, demo
 tests/            unit, integration, live
 ```

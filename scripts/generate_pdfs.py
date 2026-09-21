@@ -15,10 +15,19 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from reportlab import rl_config
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.lib.units import mm
 from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer
+
+# Deterministic output. By default reportlab stamps /CreationDate, /ModDate and
+# a random-ish /ID into every file, so rendering the same paper twice produces
+# different bytes. The seeder deduplicates documents by content hash, so
+# non-deterministic bytes meant that seeding a second time (say `make seed`
+# after `make up`, where each container renders its own copy) silently inserted
+# a duplicate corpus instead of doing nothing.
+rl_config.invariant = 1
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "data" / "sample" / "documents.json"
